@@ -14,24 +14,20 @@ public class Ruin {
     
     for (int day = 1; day <= totalSimulations; day++) {
         int roundsPerDay = 0;
-     while (startAmount > 0 && startAmount < winLimit) {
+        int money = startAmount;
+     while (money > 0 && money < winLimit) {
         double game = Math.random();
         roundsPerDay++;
         if (game<winChance) {
-            startAmount++;
+            money++;
         } else {
-            startAmount--;
+            money--;
         }
     }
         System.out.println("On " +day+ ":");
         System.out.println("You played " +roundsPerDay+ " rounds today.");
-}
-    if (startAmount >= winLimit) {
-        System.out.println("Sucess!");
     }
-    if (startAmount <= 0) {
-        System.out.println("Ruin!");
-    }
+
 }
 }
 
