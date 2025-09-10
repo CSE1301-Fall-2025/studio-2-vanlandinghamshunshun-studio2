@@ -26,8 +26,13 @@ public class Ruin {
     }
         System.out.println("On " +day+ ":");
         System.out.println("You played " +roundsPerDay+ " rounds today.");
-    }
-
+         if (money >= winLimit) {
+            System.out.println("Sucess!");
+         }
+         if (money <= 0) {
+            System.out.println("Ruin!");
+        }
+}
 }
 }
 
